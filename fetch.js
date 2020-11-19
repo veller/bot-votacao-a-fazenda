@@ -27,7 +27,7 @@ function vote(){
         console.log(response.statusCode);
         console.log(`votos: `, counter)
 
-        counter++
+        if (response.statusCode === 200) counter++
       })
 }
 
