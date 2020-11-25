@@ -1,1 +1,1 @@
-worker: node fetch.js
+worker: node index.js
