@@ -32,7 +32,7 @@ function vote(){
       })
 }
 
-setInterval(vote, 3000)
+setInterval(vote, 30000)
 
 const requestListener = function vote(req, res) {
   res.writeHead(200);
