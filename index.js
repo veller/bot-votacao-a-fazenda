@@ -3,6 +3,22 @@ const http = require('http')
 
 let counter = 0
 
+process
+  .on('SIGTERM', shutdown('SIGTERM'))
+  .on('SIGINT', shutdown('SIGINT'))
+  .on('uncaughtException', shutdown('uncaughtException'));
+
+  function shutdown(signal) {
+    return (err) => {
+      console.log(`${ signal }...`);
+      if (err) console.error(err.stack || err);
+      setTimeout(() => {
+        console.log('...waited 5s, exiting.');
+        process.exit(err ? 1 : 0);
+      }, 5000).unref();
+    };
+  }
+
 function vote(){
     const options = {
         method: 'POST',
