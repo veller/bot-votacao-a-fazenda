@@ -19,7 +19,7 @@ function vote(){
           referer: 'https://afazenda.r7.com/a-fazenda-12/votacao',
           'accept-language': 'en-US,en;q=0.9,pt;q=0.8'
         },
-        form: {voting_id: '268', alternative_id: '648'},
+        form: {voting_id: '271', alternative_id: '658'},
       };
       
       request(options, function (error, response, body) {
@@ -32,13 +32,13 @@ function vote(){
       })
 }
 
-setInterval(vote, 300000)
+setInterval(vote, 5000)
 
-const requestListener = function vote(req, res) {
+const requestListener = function(req, res) {
   res.writeHead(200);
   res.end('Hello, World!');
 }
 
 const server = http.createServer(requestListener);
 // this should be the last line
-server.listen(parseInt(process.env.PORT) || 8080);
+server.listen(parseInt(process.env.PORT) || 3000);
