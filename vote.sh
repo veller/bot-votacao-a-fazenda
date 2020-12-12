@@ -11,10 +11,10 @@ while :; do
   -H 'sec-fetch-dest: empty' \
   -H 'referer: https://afazenda.r7.com/a-fazenda-12/votacao' \
   -H 'accept-language: en-US,en;q=0.9,pt;q=0.8' \
-  --data-raw 'voting_id=275&alternative_id=672' \
+  --data-raw 'voting_id=297&alternative_id=740' \
   --compressed)
   if [ $http_response == "200" ]; then
-    echo jojo vai ficar sim. Votos: "$VOTES"
+    echo mateus vai ficar sim. Votos: "$VOTES"
     let VOTES=VOTES+1;
   else
     echo "Error"
