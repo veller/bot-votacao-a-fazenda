@@ -6,4 +6,4 @@
 3. Abrir o terminal e navegar até o local onde o arquivo estiver salvo
 4. Executar o script `bash vote.sh`
 
-para rodar ssh remoto: ssh root@MachineB 'bash -s' < vote.sh
+para rodar ssh remoto: `ssh root@MachineB 'bash -s' < vote.sh`
